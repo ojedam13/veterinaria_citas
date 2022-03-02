@@ -14,7 +14,7 @@ body {
   padding-bottom: 5rem;
 }
 
-h1,
+/* h1,
 h2 {
   color: white;
   background-color: black;
@@ -23,6 +23,21 @@ h2 {
   height: 20px;
   text-transform: uppercase;
   font-family: 'Staatliches', cursive;
+  letter-spacing: 1px;
+
+} */
+
+h1,h2,h3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: wheat;
+  background-color: black;
+  margin: 10 auto;
+  
+  text-transform: uppercase;
+  font-family: 'Staatliches',
+  cursive;
   letter-spacing: 1px;
 }
 
@@ -48,7 +63,7 @@ h2 {
 }
 
 label {
-  color: white;
+  color: black;
 }
 
 input[type="date"],
