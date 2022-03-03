@@ -13,9 +13,16 @@ const Formulario = () => {
     });
 
     //funcion que se ejecuta cada q el usuario escribe en un input
-    const actualizarState = () => {
-        console.log('escribiendo..')
+    const actualizarState = e => {
+        actualizarCita({
+            ...cita,
+            [e.target.name] : e.target.value
+        })
     }
+
+    //Extraer los valores
+    const { mascota, propietario, fecha, hora, sintomas } = cita;
+
     return ( 
         <Fragment>
             <h3>Crear Cita</h3>
@@ -28,14 +35,16 @@ const Formulario = () => {
                     className='u-full-width'
                     placeholder='Nombre mascota'
                     onChange={actualizarState}
+                    value={mascota}
                 />
                 <label>Nombre del Dueño</label>
                 <input 
                     type='text'
-                    name='propietaro'
+                    name='propietario'
                     className='u-full-width'
                     placeholder='Nombre del dueño'
                     onChange={actualizarState}
+                     value={propietario}
                 />
                 <label>Fecha</label>
                 <input 
@@ -43,6 +52,7 @@ const Formulario = () => {
                     name='fecha'
                     className='u-full-width'
                     onChange={actualizarState}
+                     value={fecha}
                 />
                 <label>Hora</label>
                 <input 
@@ -50,12 +60,14 @@ const Formulario = () => {
                     name='hora'
                     className='u-full-width'
                     onChange={actualizarState}
+                     value={hora}
                 />
                 <label>Sintomas</label>
                 <textarea
                     className='u-full-width'
                     name='sintomas'
                     onChange={actualizarState}
+                     value={sintomas}
                 ></textarea>
                 <button
                     type='submit'

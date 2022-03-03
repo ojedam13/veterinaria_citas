@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: url(../public/pet-shop.png);
+  background-image: url(../public/veterinary-gcfa602804_1920.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -32,7 +32,7 @@ h1,h2,h3{
   justify-content: center;
   align-items: center;
   color: wheat;
-  background-color: black;
+  /* background-color: black; */
   margin: 10 auto;
   
   text-transform: uppercase;
@@ -64,6 +64,10 @@ h1,h2,h3{
 
 label {
   color: black;
+  background-color: wheat;
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 20px;
 }
 
 input[type="date"],
