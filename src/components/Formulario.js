@@ -1,7 +1,7 @@
 import React, {Fragment, useState} from 'react';
 import {v4 as uuidv4} from 'uuid';
 uuidv4();
-const Formulario = () => {
+const Formulario = ({crearCita}) => {
 
     //Crear state de Citas
     const [cita, actualizarCita] = useState({
@@ -41,7 +41,7 @@ const Formulario = () => {
         cita.id = uuidv4();
         console.log(cita);
         // Crear la cita
-
+        crearCita(cita);
         //Reiniciar el form
     }
 
@@ -52,7 +52,7 @@ const Formulario = () => {
             <form
                 onSubmit={submitCita}
             >
-                <label>Nombre Mascota</label>
+                <label>Nombre de la Mascota</label>
                 <input 
                     type='text'
                     name='mascota'
