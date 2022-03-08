@@ -19,7 +19,13 @@ function App() {
     ]);
   }
 
-
+//funcion q elimina una cita por su id
+  const eliminarCita = id => {
+    const nuevasCitas = citas.filter(cita => cita.id != id);
+    guardarCitas(nuevasCitas)
+  }
+  
+  
   return (
     <Fragment>
       <h1>Veterinaria Canina</h1>
@@ -37,6 +43,7 @@ function App() {
               <Cita
                 key={cita.id}
                 cita={cita}
+                eliminarCita={eliminarCita}
               />
             ))}
           </div>
