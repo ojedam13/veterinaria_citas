@@ -1,4 +1,4 @@
-import React, {Fragment, useState} from 'react';
+import React, {Fragment, useState, useEffect} from 'react';
 import Formulario from './components/Formulario';
 import Cita from './components/Cita';
 
@@ -9,6 +9,12 @@ import Cita from './components/Cita';
 function App() {
   // Arrgelo de citas
   const [citas, guardarCitas] = useState([]);
+
+  //Use efecct para realizar ciertas operaciones cuando el state cambia
+  useEffect(() => {
+    console.log('listo');
+  }, [citas]);
+
 
 
   // Funcion q tome las citas actuales y agregre la nueva
