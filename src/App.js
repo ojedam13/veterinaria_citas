@@ -25,6 +25,8 @@ function App() {
     guardarCitas(nuevasCitas)
   }
   
+  //Mnsaje condicional
+  const titulo = citas.length === 0 ? 'Agrega una cita' : 'Tus citas';
   
   return (
     <Fragment>
@@ -38,7 +40,7 @@ function App() {
               />
           </div>
           <div className='one-half column'>
-            <h3>Tus citas</h3>
+            <h3>{titulo}</h3>
             {citas.map(cita => (
               <Cita
                 key={cita.id}
