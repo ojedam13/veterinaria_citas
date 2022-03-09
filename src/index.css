@@ -108,13 +108,17 @@ input[type="time"] {
   border-bottom-right-radius: 1rem;
 }
 
-.button.eliminar,
-.button.eliminar:hover {
-  background-color: #c10059;
+.button.eliminar
+ {
+  background-color: red;
   color: white;
   margin-top: 2rem;
 }
-
+.button.eliminar:hover{
+  background-color: rgb(235, 12, 12);
+  color: wheat;
+  transition: all .2 ease-in-out;
+}
 .alerta-error {
   background-color: white;
   color: red;
@@ -124,3 +128,4 @@ input[type="time"] {
   text-align: center;
   font-family: 'Staatliches', cursive;
 }
+
